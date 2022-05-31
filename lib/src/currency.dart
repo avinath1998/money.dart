@@ -163,8 +163,13 @@ class Currency {
   /// Are we breaking the semantics of the == operator?
   /// Maybe we need another method that just compares the code?
   @override
-  bool operator ==(covariant Currency other) =>
-      identical(this, other) || (code == other.code && scale == other.scale);
+  bool operator ==(Object other) {
+    if (other is! Currency) {
+      return false;
+    }
+    return identical(this, other) ||
+        (code == other.code && scale == other.scale);
+  }
 
   static BigInt _calcPrecisionFactor(int precision) {
     if (precision.isNegative) {
