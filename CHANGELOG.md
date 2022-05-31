@@ -1,6 +1,6 @@
-# 3.1.4
+# 3.1.4 - COVES
 
-Corrected the home page link
+- Removed covariant keyword to allow for objects
 
 # 3.1.3-beta.1
 
